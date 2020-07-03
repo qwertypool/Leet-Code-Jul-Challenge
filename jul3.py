@@ -1,18 +1,19 @@
-class Solution:
-    def next_step(self, cells):
-        res = [0] * 8
+class Solution(object):
+    def nextCell(self,cells):
+        modifiedCell = [0]*8
         for i in range(1,7):
-            res[i] = int(cells[i-1] == cells[i+1])
-        return res
-    
+            modifiedCell[i] = 1 - cells[i-1]^cells[i+1]
+        return modifiedCell
+
     def prisonAfterNDays(self, cells, N):
-        found_dic = {}
-        for i in range(N):
-            cells_str = str(cells)
-            if cells_str in found_dic:
-                loop_len = i - found_dic[cells_str]
-                return self.prisonAfterNDays(cells, (N - i) % loop_len)
+        table = {}
+        
+        for i in range(0,N):
+            table_cell = str(cells)
+            if table_cell in table:
+                pos = i - table[table_cell]
+                return self.prisonAfterNDays(cells,(N - i)%pos)
             else:
-                found_dic[cells_str] = i 
-                cells = self.next_step(cells)      
+                table[table_cell] = i
+                cells = self.nextCell(cells)
         return cells
