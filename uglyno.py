@@ -23,7 +23,6 @@ def getNthUglyNo(n):
         if uglyNumber[l] == mul_5:  
             i5 =i5 +  1
             mul_5 = uglyNumber[i5] * 5
-  
     return uglyNumber[-1] 
   
 x = getNthUglyNo(1690)
