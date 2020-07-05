@@ -25,5 +25,5 @@ def getNthUglyNo(n):
             mul_5 = uglyNumber[i5] * 5
     return uglyNumber[-1] 
   
-x = getNthUglyNo(1690)
+x = getNthUglyNo(1169)
 print(x)
