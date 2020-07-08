@@ -6,7 +6,6 @@ def islandPerimeter( grid):
         """
         area = 0
         corner = 0
-        
         for i in range(len(grid)):
             for j in range(len(grid[i])):
                 if grid[i][j] == 1:
