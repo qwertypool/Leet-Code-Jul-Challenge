@@ -7,6 +7,8 @@ class Solution(object):
             const=nums[i]
             start=i+1
             stop=len(nums)-1
+            
+           
             while(stop>start): 
                 if((nums[stop]+nums[start]+const)>k):
                     stop=stop-1
