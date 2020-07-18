@@ -6,8 +6,8 @@ class Solution(object):
         :rtype: List[int]
         """
         frequency = {}
-        a=0
-        ls=[]
+        a = 0
+        ls = []
         for i in nums:
             if i in frequency:
                 frequency[i]+= 1
