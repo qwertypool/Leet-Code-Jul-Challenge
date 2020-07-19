@@ -1,3 +1,8 @@
+
+
+
+
+#This code is picked up from the discuss board of leetcode, not done by me..still you can refer to the concept used!
 class Solution:
     def findOrder(self, numCourses, prerequisites):
         self.adj_dict = defaultdict(set)
