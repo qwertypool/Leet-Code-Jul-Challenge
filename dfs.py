@@ -7,6 +7,7 @@ class Solution:
         self.dfs(0, len(graph)-1, graph)
         return self.paths
     
+    
     def dfs(self, i, final_point, graph):
         nodes = graph[i]
         self.path.append(i)
