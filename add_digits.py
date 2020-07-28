@@ -7,6 +7,8 @@ def addDigits(self, num):
 
 
 
+
+
         # Like the first one being a naive approach:
         ls = []
         while len(ls) != 1:
